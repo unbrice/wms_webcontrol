@@ -13,7 +13,7 @@ GET_PARAM2 = '_'
 CMD_PREFIX = '90'
 RX_LANG = '023dff'
 RX_ROOM_NAME = '0203'
-RX_CHANNAL_INFO = '0347'
+RX_CHANEL_INFO = '0347'
 RX_CHECK_READY = '0323'
 RX_SHADE_STATE = '0431'
 
@@ -84,7 +84,7 @@ class WmsController:
         return self._send_command(RX_ROOM_NAME, format(room_id, '02x'))
 
     def send_rx_channel_info(self, room_id, channel_id):
-        return self._send_command(RX_CHANNAL_INFO, format(room_id, '02x') + format(channel_id, '02x'))
+        return self._send_command(RX_CHANEL_INFO, format(room_id, '02x') + format(channel_id, '02x'))
 
     def send_rx_shade_state(self, room_id, channel_id):
         return self._send_command(RX_SHADE_STATE, format(room_id, '02x') + format(channel_id, '02x') + '01')
